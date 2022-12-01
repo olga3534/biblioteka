@@ -1,6 +1,6 @@
 
 <?php
-$mysqliConnection = mysqli_connect("localhost", "biblioteka", "olga123","biblioteka");
+$mysqliConnection = mysqli_connect("localhost", "biblioteka", "biblioteka","biblioteka");
 
 
 if(!$mysqliConnection){

@@ -10,17 +10,24 @@ if (mysqli_num_rows($result) > 0){
     echo '<tr><th>Id_dzial</th>
               <th>Nazwa</th></tr>';
 
-    while ($row = mysqli_fetch_assoc($result))
-    {
+    $dzialy=array();
+    while ($row = mysqli_fetch_assoc($result)){
+        $dzialy[]=$row;
+
         echo '<tr><td>' . $row['Id_dzial'] . '</td>'
             . '<td>' . $row['Nazwa'] . '</td></tr>';
     }
+    setcookie('dzialy', json_encode($dzialy), 86400+time(),'/');
     echo '</table>';
 }
 else
 {
     echo 'brak danych';
 }
+
+
+
+
 ?>
 
 <style>
