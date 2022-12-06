@@ -1,5 +1,6 @@
 
 <?php
+
 $mysqliConnection = mysqli_connect("localhost", "biblioteka", "biblioteka","biblioteka");
 
 
